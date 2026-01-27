@@ -1,0 +1,10 @@
+flask
+flask-cors
+pandas
+numpy
+scikit-learn
+beautifulsoup4
+requests
+newspaper3k
+lxml
+lxml_html_clean
