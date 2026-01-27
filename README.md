@@ -1,155 +1,154 @@
-📰 Fake News Detection System (NEWSAUTH)
+Fake News Detection System (NEWSAUTH)
 
-An end-to-end Fake News Detection System that uses Natural Language Processing (NLP) and Machine Learning to classify news articles as REAL, FAKE, or UNKNOWN.
-The system supports both direct text input and news article URLs, providing real-time predictions through a web interface.
+This project is an end-to-end Fake News Detection System built using Natural Language Processing (NLP) and Machine Learning. It classifies news articles as REAL, FAKE, or UNKNOWN based on linguistic patterns learned from labeled datasets. The system supports both direct text input and news article URLs.
 
-🚀 Features
+Project Features
 
-🔍 Detects Fake vs Real news using ML
+Detects fake and real news using machine learning
 
-🧠 NLP pipeline with TF-IDF Vectorization
+Uses TF-IDF for text feature extraction
 
-🤖 Logistic Regression classifier
+Logistic Regression for classification
 
-🌐 Supports URL-based article analysis (automatic scraping)
+Supports URL-based article analysis using web scraping
 
-🛡️ Safe fallback handling for unsupported or weak URLs
+Provides safe fallback handling when URL content cannot be extracted
 
-⚡ Real-time predictions via Flask REST API
+Real-time prediction using a Flask REST API
 
-🎨 Clean and responsive frontend (HTML, CSS, JavaScript)
+Clean and responsive frontend interface
 
+Project Structure
 
+NEWSAUTH
+|
+|-- backend
+| |-- data
+| | |-- Fake.csv
+| | |-- True.csv
+| |-- train_model.py
+| |-- fake_news_model.pkl
+| |-- app.py
+| |-- requirements.txt
+|
+|-- frontend
+| |-- index.html
+| |-- style.css
+| |-- app.js
+|
+|-- render.yaml
+|-- README.md
+|-- .gitignore
 
-🧠 Machine Learning Pipeline
+Machine Learning Workflow
 
-Text Cleaning
+Text preprocessing
 
-Lowercasing
+Convert text to lowercase
 
-Removing URLs, punctuation, and special characters
+Remove URLs and special characters
 
-Feature Extraction
+Feature extraction
 
-TF-IDF Vectorization
+TF-IDF vectorization
 
 Stop-word removal
 
-Model
+Model training
 
-Logistic Regression (Supervised Learning)
+Logistic Regression classifier
 
-Prediction Output
+Prediction output
 
 REAL
 
 FAKE
 
-UNKNOWN (fallback when analysis is unreliable)
+UNKNOWN (fallback for unreliable inputs)
 
-🌐 URL Scraping Support
+URL Scraping Support
 
-Uses newspaper3k for article extraction
+The system allows users to input a news article URL. The backend automatically extracts the article text using newspaper3k. If the extraction fails or the content is insufficient, the system safely returns an UNKNOWN result to avoid misleading predictions.
 
-Adds browser user-agent and timeout handling
+How to Run the Project Locally
 
-Automatically falls back to UNKNOWN if:
+Step 1: Clone the repository
 
-Content extraction fails
-
-Article text is too short
-
-Website blocks scraping
-
-This ensures no misleading predictions.
-
-🖥️ How to Run Locally
-1️⃣ Clone the Repository
 git clone https://github.com/sandhiya-git-hub/Newsauth.git
+
 cd Newsauth
 
-2️⃣ Create Virtual Environment
-python -m venv venv
-venv\Scripts\activate   # Windows
+Step 2: Create a virtual environment
 
-3️⃣ Install Backend Dependencies
+python -m venv venv
+venv\Scripts\activate
+
+Step 3: Install backend dependencies
+
 cd backend
 pip install -r requirements.txt
 
-4️⃣ Train the Model
+Step 4: Train the machine learning model
+
 python train_model.py
 
-5️⃣ Start Backend Server
+Step 5: Start the backend server
+
 python app.py
 
-
-Backend runs at:
-
+The backend will run at:
 http://127.0.0.1:5000
 
-6️⃣ Run Frontend
+Step 6: Run the frontend
 
-Open:
-
+Open the file below in a browser:
 frontend/index.html
 
+Supported Inputs
 
-in your browser.
+Full news article text
 
-🧪 Supported Input Types
-Input Type	Example	Result
-Full news article text	Pasted content	REAL / FAKE
-News article URL	Reuters, Al Jazeera	REAL / FAKE / UNKNOWN
-Short or weak content	Few lines	UNKNOWN
-Empty input	—	UNKNOWN
-🛠️ Technologies Used
+News article URLs
+
+Short or incomplete text (returns UNKNOWN)
+
+Empty input (returns UNKNOWN)
+
+Technologies Used
 
 Frontend: HTML, CSS, JavaScript
-
 Backend: Flask, Flask-CORS
-
-NLP: TF-IDF
-
 Machine Learning: Logistic Regression
-
+NLP: TF-IDF Vectorization
 Web Scraping: newspaper3k
+Deployment: Render and GitHub Pages
 
-Deployment: Render (Backend), GitHub Pages (Frontend)
+Limitations
 
-☁️ Live Deployment
+Does not verify factual correctness using external databases
 
-Backend API: Deployed on Render
+Works only on text-based content
 
-Frontend: Hosted using GitHub Pages
+Some websites may block article scraping
 
-Paste article text or URL and get instant predictions.
+Future Enhancements
 
-⚠️ Limitations
+Source credibility analysis
 
-Does not verify factual correctness against databases
-
-Relies on linguistic patterns, not source reputation
-
-Some websites may block automated scraping
-
-🔮 Future Enhancements
-
-Source credibility scoring
-
-Deep learning models (BERT, Transformers)
+Transformer-based models (BERT)
 
 Fact-check API integration
 
 Multi-language support
 
-Explainable AI (prediction reasoning)
+Explainable AI for predictions
 
-👩‍💻 Author
+Author
 
 Sandhiya
-Fake News Detection System – NEWSAUTH
-Machine Learning & NLP Project
+Fake News Detection System (NEWSAUTH)
+Machine Learning and NLP Project
 
-📜 License
+License
 
-This project is for educational and academic purposes.
+This project is intended for educational and academic use only.
