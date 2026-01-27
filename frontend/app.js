@@ -27,7 +27,8 @@ function handleDetect(e) {
     btnText.style.display = 'none';
     spinner.style.display = 'block';
 
-    fetch("http://127.0.0.1:5000/predict", {
+fetch("https://newsauth-backend.onrender.com/predict", {
+
         method: "POST",
         headers: {
             "Content-Type": "application/json"
