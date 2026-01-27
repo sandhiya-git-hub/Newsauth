@@ -7,8 +7,14 @@ from newspaper import Article
 app = Flask(__name__)
 CORS(app)
 
-with open("fake_news_model.pkl", "rb") as f:
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "fake_news_model.pkl")
+
+with open(MODEL_PATH, "rb") as f:
     model = pickle.load(f)
+
 
 def clean_text(text):
     text = text.lower()
