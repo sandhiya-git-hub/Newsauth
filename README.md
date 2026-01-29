@@ -75,8 +75,8 @@ The model classifies news as **REAL** or **FAKE** and provides a confidence scor
 
 ## ▶️ How to Run the Project Locally
 
-### 1️⃣ Clone the Repository
-```bash
+1️⃣ Clone the Repository
+
 git clone https://github.com/sandhiya-git-hub/Newsauth.git
 cd Newsauth
 
