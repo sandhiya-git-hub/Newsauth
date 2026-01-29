@@ -3,8 +3,8 @@ flask-cors
 pandas
 numpy
 scikit-learn
-beautifulsoup4
 requests
+beautifulsoup4
 newspaper3k
 lxml
 lxml_html_clean
