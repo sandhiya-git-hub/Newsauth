@@ -94,16 +94,19 @@ frontend/index.html
 
 ❌ Images, PDFs, social media posts not supported
 
+
 📊 Model Performance
 
 Accuracy achieved: ~98% (on training dataset)
 
 Uses Logistic Regression for interpretability and efficiency
 
+
 ⚠️ Disclaimer
 
 This system is a content-based classifier and does not perform real-time fact-checking against external databases.
 Predictions are based on linguistic patterns learned from the dataset.
+
 
 🔮 Future Enhancements
 
@@ -115,9 +118,11 @@ Deployment using cloud platforms
 
 Multilingual fake news detection
 
+
 👩‍💻 Author
 
 Developed as an academic machine learning project using NLP techniques.
+
 
 📄 License
 
